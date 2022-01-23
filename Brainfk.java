@@ -107,14 +107,14 @@ class Interpreter{
                     case '.':
                         result = result.concat("" + ((char) charList.get(ptr).intValue()));
                     break;
-                    case ';':
+                    case ',':
                         charList.set(ptr, sc.nextInt() % 128);
                     break;
                 default: 
                     break;
             }
         }
-        if(arith.size() != 0) throw new Exception("Not valid Expression");
+        if(arith.size() != 0) throw new Exception("Not a valid Expression");
         return result;
     }
 }
