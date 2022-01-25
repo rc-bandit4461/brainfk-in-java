@@ -72,7 +72,7 @@ class Interpreter{
                     
                     case '-':
                         if(charList.get(ptr) == 0) 
-                            charList.set(ptr, 127);
+                            charList.set(ptr, 255);
                         else
                             charList.set(ptr, charList.get(ptr) -1);
                         break;
@@ -108,7 +108,7 @@ class Interpreter{
                         result = result.concat("" + ((char) charList.get(ptr).intValue()));
                     break;
                     case ',':
-                        charList.set(ptr, sc.nextInt() % 128);
+                        charList.set(ptr, sc.nextInt() % 256);
                     break;
                 default: 
                     break;
