@@ -67,7 +67,7 @@ class Interpreter{
             char currentChar = code.charAt(i);
             switch (currentChar) {
                     case '+':
-                        charList.set(ptr, (charList.get(ptr) + 1)%128);
+                        charList.set(ptr, (charList.get(ptr) + 1)%256);
                         break;
                     
                     case '-':
